@@ -25,6 +25,12 @@ export class AppComponent {
   "categorias": 'Ayuda humanitaria, Cooperación internacional, donaciones'
   };
 
+  acerca = {
+    "titulo": "Acerca de",
+    "subtitulo": "Únete a nosotros en nuestro Día de la Caridad y sé parte de la solución. Juntos podemos marcar la diferencia en la vida de quienes más lo necesitan.",
+    "descripcion": "¡Corre por una buena causa! Únete a nuestra carrera benéfica y ayúdanos a construir un hogar para nuestros adultos mayores y niños en estado de pobreza extrema. ¡Todos juntos podemos hacer realidad este sueño!",
+    "lugares": ["San Gaspar Ixchil", "Santa Bárbara Huehuetenango", "Cahabón", "Colotenango", "Lanquín"]
+  }
 
   servicios = [{
     "titulo": "Día Internacional de la Paz",
@@ -119,7 +125,15 @@ export class AppComponent {
     "cita": "Agendar cita",
     "leer": "Leer más"
   },
-];
+  ];
+
+  caracteristicas = {
+    "titulo": "Donde contactarnos?",
+    "subtitulo1": "Beneficios",
+    "subtitulo2": "de Donarnos",
+    "descripcion": "Sé parte de una comunidad comprometida con hacer del mundo un lugar más justo y equitativo. Al donar te conecta con tu lado más humano y te brinda la satisfacción de saber que estás marcando la diferencia. Y recuerda: estás invirtiendo en el futuro de nuestros niños, brindándoles educación, salud y oportunidades para crecer.",
+    "beneficios": ["Impacto directo", "Cambio positivo", "Crecimiento conjunto", "Futuro Mejor"]
+  }
 
   changeSlide(index: number) {
     this.activeIndex = index;
