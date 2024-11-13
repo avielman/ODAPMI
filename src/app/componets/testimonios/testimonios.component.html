@@ -1,0 +1,32 @@
+   <!-- Testimonial Start -->
+   <div class="container-fluid bg-light my-5 p-0 py-5">
+    <div class="container p-0 py-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-secondary mb-3">{{ testimonios.titulo }}</h4>
+            <h1 class="display-4 m-0">{{ testimonios.subtitulo1 }} <span class="text-primary">{{ testimonios.subtitulo2 }}</span></h1>
+        </div>
+        <div class="row justify-content-center bg-secondary">
+            <div class="col-md-6 d-flex flex-column" *ngFor="let testimonio of testimonios.testimonios">
+
+                <div class="card flex-grow-1 mb-3 mt-3 h-100 mh-100" >
+                    <div class="bg-white mx-3 p-4 " >
+                        <div class="d-flex align-items-end mb-3 mt-n4 ml-2 mr-2 card-header">
+                            <img class="card-img ml-0 mt-1" src="{{ testimonio.imagen }}" style="width: 80px; height: 80px;" alt="{{ testimonio.nombre}}">
+                            <div class="ml-3">
+                                <h5>{{ testimonio.nombre }}</h5>
+                                <i>{{ testimonio.profesion }}</i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p class="m-0 text-justify ">{{ testimonio.testimonio }}</p>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Testimonial End -->

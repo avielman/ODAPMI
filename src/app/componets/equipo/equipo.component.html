@@ -1,0 +1,29 @@
+    <!-- Team Start -->
+    <div class="container mt-5 pt-5 pb-3">
+      <div class="d-flex flex-column text-center mb-5">
+          <h4 class="text-secondary mb-3">{{ integrantes.titulo }}</h4>
+          <h1 class="display-4 m-0">{{ integrantes.subtitulo1 }} <span class="text-primary">{{ integrantes.subtitulo2 }}</span></h1>
+      </div>
+      <div class="row">
+          <div class="col-lg-3 col-md-6" *ngFor="let integrante of integrantes.miembros">
+              <div class="team card position-relative overflow-hidden border-0 mb-4 d-flex flex-column h-100">
+                  <div class="flex-grow-1">
+                      <img class="card-img-top img-fluid" src="{{ integrante.imagen }}" alt="{{ integrante.nombre }}">
+                  </div>
+                  <div class="card-body text-center p-0">
+                      <div class="team-text d-flex flex-column justify-content-center bg-light">
+                          <h5>{{ integrante.nombre }}</h5>
+                          <i>{{ integrante.puesto }}</i>
+                      </div>
+                      <div class="team-social d-flex align-items-center justify-content-center bg-dark">
+                          <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" target="_blank" [href]="integrante.twitter"><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" target="_blank" [href]="integrante.facebook"><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" target="_blank" [href]="integrante.linkedin"><i class="fab fa-linkedin-in"></i></a>
+                          <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" target="_blank" [href]="integrante.instagram"><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Team End -->

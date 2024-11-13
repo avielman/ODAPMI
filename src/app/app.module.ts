@@ -13,6 +13,12 @@ import { NavbarComponent } from './componets/navbar/navbar.component';
 import { BookingComponent } from './componets/booking/booking.component';
 import { AboutComponent } from './componets/about/about.component';
 import { ServiciosComponent } from './componets/servicios/servicios.component';
+import { CaracteristicasComponent } from './componets/caracteristicas/caracteristicas.component';
+import { DonacionesComponent } from './componets/donaciones/donaciones.component';
+import { EquipoComponent } from './componets/equipo/equipo.component';
+import { TestimoniosComponent } from './componets/testimonios/testimonios.component';
+import { BlogsComponent } from './componets/blogs/blogs.component';
+import { FooterComponent } from './componets/footer/footer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -29,7 +35,13 @@ const routes: Routes = [
     NavbarComponent,
     BookingComponent,
     AboutComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    CaracteristicasComponent,
+    DonacionesComponent,
+    EquipoComponent,
+    TestimoniosComponent,
+    BlogsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
