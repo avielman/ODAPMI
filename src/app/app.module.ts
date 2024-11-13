@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CarruselComponent } from './componets/carrusel/carrusel.component';
+import { TopbarComponent } from './componets/topbar/topbar.component';
+import { NavbarComponent } from './componets/navbar/navbar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -19,7 +21,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    CarruselComponent
+    CarruselComponent,
+    TopbarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
