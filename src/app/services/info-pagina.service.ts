@@ -193,19 +193,19 @@ export class InfoPaginaService {
     ],
     "citas": [
       {
-        "tipo": "en el sitio",
+        "tipo": "En el sitio",
         "descripcion": "Cita presencial en nuestras oficinas"
       },
       {
-        "tipo": "telefónica",
+        "tipo": "Telefónica",
         "descripcion": "Llamada telefónica para tratar el asunto"
       },
       {
-        "tipo": "email",
+        "tipo": "Email",
         "descripcion": "Intercambio de información por correo electrónico"
       },
       {
-        "tipo": "whatsapp",
+        "tipo": "Whatsapp",
         "descripcion": "Conversación a través de la aplicación WhatsApp"
       }
     ],

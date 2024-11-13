@@ -4,7 +4,7 @@ import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.css']
+  styleUrls: ['./topbar.component.css', '../../../assets/css/style.min.css']
 })
 export class TopbarComponent {
   title = 'ODAPMI';

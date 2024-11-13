@@ -6,7 +6,7 @@ import { NgModelGroup } from '@angular/forms';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css', '../../assets/css/style.css', '../../assets/lib/flaticon/font/flaticon.css', '../../assets/lib/owlcarousel/assets/owl.carousel.min.css',
+  styleUrls: ['./home.component.css', '../../assets/css/style.min.css', '../../assets/lib/flaticon/font/flaticon.css', '../../assets/lib/owlcarousel/assets/owl.carousel.min.css',
     '../../assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css']
 })
 

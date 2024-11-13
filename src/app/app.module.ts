@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { CarruselComponent } from './componets/carrusel/carrusel.component';
 import { TopbarComponent } from './componets/topbar/topbar.component';
 import { NavbarComponent } from './componets/navbar/navbar.component';
+import { BookingComponent } from './componets/booking/booking.component';
+import { AboutComponent } from './componets/about/about.component';
+import { ServiciosComponent } from './componets/servicios/servicios.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -23,7 +26,10 @@ const routes: Routes = [
     HomeComponent,
     CarruselComponent,
     TopbarComponent,
-    NavbarComponent
+    NavbarComponent,
+    BookingComponent,
+    AboutComponent,
+    ServiciosComponent
   ],
   imports: [
     BrowserModule,
