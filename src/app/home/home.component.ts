@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { InfoPaginaService } from '../services/info-pagina.service';
+import { CarruselComponent } from '../componets/carrusel/carrusel.component';
+import { NgModelGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,7 @@ import { InfoPaginaService } from '../services/info-pagina.service';
   styleUrls: ['./home.component.css', '../../assets/css/style.css', '../../assets/lib/flaticon/font/flaticon.css', '../../assets/lib/owlcarousel/assets/owl.carousel.min.css',
     '../../assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css']
 })
+
 export class HomeComponent {
   title = 'ODAPMI';
   logo = '../assets/img/logo.jpg';

@@ -100,35 +100,39 @@
     <!-- Navbar End -->
 
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide" data-ride="carousel" *ngFor="let car of carrousel; let i = index;">
-            <div class="carousel-inner" >
-                <div class="carousel-item" [class.active]="i === activeIndex">
-                    <img class="w-100" src="{{ car.imagen }}" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h3 class="text-white mb-3 d-none d-sm-block">{{ car.Titulo }}</h3>
-                            <h1 class="display-3 text-white mb-3">{{ car.subtitulo }}</h1>
-                            <h5 class="text-white mb-3 d-none d-sm-block">{{ car.descripcion }}</h5>
-                            <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">{{ car.cita }}</a>
-                            <a href="" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">{{ car.leer }}</a>
+    <!-- Carousel Start -->    
+    
+        <div class="container-fluid p-0">
+            <div id="header-carousel" class="carousel slide" data-ride="carousel" *ngFor="let car of carrousel; let i = index;">
+                <div class="carousel-inner" >
+                    <div class="carousel-item" [class.active]="i === activeIndex">
+                        <img class="w-100" src="{{ car.imagen }}" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h3 class="text-white mb-3 d-none d-sm-block">{{ car.Titulo }}</h3>
+                                <h1 class="display-3 text-white mb-3">{{ car.subtitulo }}</h1>
+                                <h5 class="text-white mb-3 d-none d-sm-block">{{ car.descripcion }}</h5>
+                                <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">{{ car.cita }}</a>
+                                <a href="" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">{{ car.leer }}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                    <div class="btn btn-primary rounded" style="width: 45px; height: 45px;">
+                        <span class="carousel-control-prev-icon mb-n2"></span>
+                    </div>
+                </a>
+                <a class="carousel-control-next" href="#header-carousel" data-slide="next" onclick="changeSlide(i)">
+                    <div class="btn btn-primary rounded" style="width: 45px; height: 45px;">
+                        <span class="carousel-control-next-icon mb-n2"></span>
+                    </div>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                <div class="btn btn-primary rounded" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-prev-icon mb-n2"></span>
-                </div>
-            </a>
-            <a class="carousel-control-next" href="#header-carousel" data-slide="next" onclick="changeSlide(i)">
-                <div class="btn btn-primary rounded" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-next-icon mb-n2"></span>
-                </div>
-            </a>
         </div>
-    </div>
+    
+    
+    
     <!-- Carousel End -->
 
 
