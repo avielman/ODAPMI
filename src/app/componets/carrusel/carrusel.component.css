@@ -112,3 +112,24 @@
                 1px 1px 0 #ccc;
 
 }
+
+.carousel-item img {
+  max-height: 75%;
+  height: 50%;
+  max-width: 95%;
+  align-self: center;
+  align-items: center;
+  object-fit: cover;
+}
+
+.carousel-control-prev {
+  max-width: 100px;
+  width: 100px;
+  min-width: 25px;
+}
+
+.carousel-control-next {
+  max-width: 100px;
+  width: 100px;
+  min-width: 25px;
+}
