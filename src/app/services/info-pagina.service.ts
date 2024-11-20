@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ICarouselItem } from '../componets/carrusel/carrusel.component';
 
 interface Home {
   nosotros: {
@@ -32,6 +33,7 @@ interface Home {
     descripcion: string;
   }>;
   carrousel: Array<{
+    id: number | string;
     Titulo: string;
     subtitulo: string;
     imagen: string;
@@ -211,6 +213,7 @@ export class InfoPaginaService {
     ],
     "carrousel": [
       {
+        "id": "0",
         "Titulo": "Sembrando esperanza,",
         "subtitulo": "cosechando futuro.",
         "imagen": "../assets/img/carousel-1.jpg",
@@ -219,6 +222,7 @@ export class InfoPaginaService {
         "leer": "Leer más"
       },
       {
+        "id": "1",
         "Titulo": "Transformando vidas,",
         "subtitulo": "un paso a la vez.",
         "imagen": "../assets/img/carousel-2.jpg",
@@ -393,4 +397,38 @@ export class InfoPaginaService {
   constructor() { 
     this.homePage = this.home;  
   }
+
+  carousel: ICarouselItem[] = 
+  [
+    {
+      id: 1,
+      title: {
+        first: 'TITULO',
+        second: 'Principal'
+      },
+      subtitle: 'Esto es una gran descripción',
+      link: '/',
+      image: '../assets/img/carousel-2.jpg'
+    },
+    {
+      id: 2,
+      title: {
+        first: 'TITULO',
+        second: 'Segundo'
+      },
+      subtitle: 'Esto es una gran descripción',
+      link: '/',
+      image: '../assets/img/carousel-1.jpg'
+    },
+    {
+      id: 3,
+      title: {
+        first: 'TITULO',
+        second: 'Tercero'
+      },
+      subtitle: 'Esto es una gran descripción',
+      link: '/',
+      image: '../assets/img/carousel-3.jpg'
+    }
+  ]
 }

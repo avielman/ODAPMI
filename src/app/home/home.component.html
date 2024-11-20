@@ -61,7 +61,7 @@
                         <p class="m-0">{{ nosotros.cel }}</p>
                     </div>
                 </div>
-                <img class="ml-5 display-1 align-items-md-center align-self-center align-content-center align-middle" style="height: 75px; width: 75px; align-items: flex-end;" src="{{ logo }}" alt="Image">
+                <img loading="lazy" class="ml-5 display-1 align-items-md-center align-self-center align-content-center align-middle" style="height: 75px; width: 75px; align-items: flex-end;" src="{{ logo }}" alt="Image">
             </div>
         </div>
     </div>
@@ -105,7 +105,7 @@
             <div id="header-carousel" class="carousel slide" data-ride="carousel" *ngFor="let car of carrousel; let i = index;">
                 <div class="carousel-inner" >
                     <div class="carousel-item" [class.active]="i === activeIndex">
-                        <img class="w-100" src="{{ car.imagen }}" alt="Image">
+                        <img loading="lazy" class="w-100" src="{{ car.imagen }}" alt="Image">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 900px;">
                                 <h3 class="text-white mb-3 d-none d-sm-block">{{ car.Titulo }}</h3>
@@ -211,16 +211,16 @@
             <div class="col-lg-5">
                 <div class="row px-3 d-flex align-items-stretch" >
                     <div class="col-12 p-0">
-                        <img class="img-fluid w-100" src="../assets/img/about-1.jpg" alt="">
+                        <img loading="lazy" class="img-fluid w-100" src="../assets/img/about-1.jpg" alt="">
                     </div>
                     <div class="col-6 p-0">
                         <div class="img-container">
-                            <img class="img-fluid w-100" src="../assets/img/about-2.jpg" alt="">
+                            <img loading="lazy" class="img-fluid w-100" src="../assets/img/about-2.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-6 p-0">
                         <div class="img-container">
-                            <img class="img-fluid w-100" src="../assets/img/about-3.jpg" alt="">
+                            <img loading="lazy" class="img-fluid w-100" src="../assets/img/about-3.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -258,7 +258,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5">
-                <img class="img-fluid w-100" src="../assets/img/feature.jpg" alt="">
+                <img loading="lazy" class="img-fluid w-100" src="../assets/img/feature.jpg" alt="">
             </div>
             <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5 mt-3">
                 <h4 class="text-secondary mb-3">{{ caracteristicas.titulo }}</h4>
@@ -289,7 +289,7 @@
                 <div class="col-lg-4 mb-4" *ngFor="let donacion of donaciones.opciones">
                     <div class="card border-0" >
                         <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img class="card-img-top" src="{{ donacion.imagen }}" alt="">
+                            <img loading="lazy" class="card-img-top" src="{{ donacion.imagen }}" alt="">
                             <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
                                 <h3 class="text-primary mb-3">{{ donacion.tipo }}</h3>
                                 <h1 class="display-4 text-white mb-0">
@@ -326,7 +326,7 @@
             <div class="col-lg-3 col-md-6" *ngFor="let integrante of integrantes.miembros">
                 <div class="team card position-relative overflow-hidden border-0 mb-4 d-flex flex-column h-100">
                     <div class="flex-grow-1">
-                        <img class="card-img-top img-fluid" src="{{ integrante.imagen }}" alt="{{ integrante.nombre }}">
+                        <img loading="lazy" class="card-img-top img-fluid" src="{{ integrante.imagen }}" alt="{{ integrante.nombre }}">
                     </div>
                     <div class="card-body text-center p-0">
                         <div class="team-text d-flex flex-column justify-content-center bg-light">
@@ -360,7 +360,7 @@
                     <div class="card flex-grow-1 mb-3 mt-3 h-100 mh-100" >
                         <div class="bg-white mx-3 p-4 " >
                             <div class="d-flex align-items-end mb-3 mt-n4 ml-2 mr-2 card-header">
-                                <img class="card-img ml-0 mt-1" src="{{ testimonio.imagen }}" style="width: 80px; height: 80px;" alt="{{ testimonio.nombre}}">
+                                <img loading="lazy" class="card-img ml-0 mt-1" src="{{ testimonio.imagen }}" style="width: 80px; height: 80px;" alt="{{ testimonio.nombre}}">
                                 <div class="ml-3">
                                     <h5>{{ testimonio.nombre }}</h5>
                                     <i>{{ testimonio.profesion }}</i>
@@ -390,7 +390,7 @@
         <div class="row pb-3 h-100">
             <div class="col-lg-4 mb-4 d-flex flex-column" *ngFor="let post of blogs.posts">
                 <div class="card border-0 mb-2 flex-grow-1">
-                    <img class="card-img-top" src="{{ post.imagen }}" alt="">
+                    <img loading="lazy" class="card-img-top" src="{{ post.imagen }}" alt="">
                     <div class="card-body bg-light p-4">
                         <h4 class="card-title text-truncate">{{ post.titulo }}</h4>
                         <div class="d-flex justify-content-between align-items-center mb-3 w-100">
