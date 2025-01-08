@@ -1,0 +1,35 @@
+<!-- Services Start -->
+<div class="container-fluid bg-light pt-5">
+  <div class="container py-5">
+    <div class="d-flex flex-column text-center mb-5">
+      <h4 class="text-secondary mb-3">Nuestros Proyectos</h4>
+      <h1 class="display-4 m-0"><span class="text-primary">Proyectos</span> Humanitarios</h1>
+    </div>
+    <div class="row pb-3">
+      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let proy of proyectos; index as i; first as isFirst;">
+        <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5 flex-grow-1 h-100">
+          <div class="flex-grow-1">
+            <h3 [ngClass]="proy.iconclass" class="display-3 font-weight-normal text-secondary mb-3"></h3>
+            <h3 class="mb-3">{{ proy.titulo }}</h3>
+            <p class="text-justify">{{ proy.descripcion }}</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Services End -->
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">      
+      <div class="card-body">
+        <h2 class="card-title text-primary bg-light">{{ proyecto.titulo }}</h2>
+        <small class="text-muted ">
+        <p class="card-text text-justify bg-white">{{ proyecto.descripcionl }}</p>
+      </small>
+      </div>
+    </div>
+  </div>
+</div>
