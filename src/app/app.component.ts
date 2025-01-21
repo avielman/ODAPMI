@@ -9,6 +9,7 @@ import { InfoPaginaService } from './services/info-pagina.service';
 })
 export class AppComponent {
   // insertamos los servicios aquí.
+  public nombre: string = 'ODAPMI';
   
   constructor (public _infoPaginaService: InfoPaginaService) {
 
