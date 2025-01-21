@@ -60,11 +60,7 @@ export class ProyectoComponent {
         }     
       }
     });
-    //mostrar en un alert el proyecto
-    //alert(this.proyecto.descripcionl);
-    console.clear();
-    console.log("proyecto: " + this.proyecto);
-    //this.proyecto = this.proyectos.filter((p: Proyectos) => p.id === id);
+        
   }
 
 }
