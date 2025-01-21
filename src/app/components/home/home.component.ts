@@ -52,6 +52,6 @@ export class HomeComponent {
   selectProyecto(id: number) {
     this.router.navigate(['/proyecto', id]);
   }
-
+  
 }
 

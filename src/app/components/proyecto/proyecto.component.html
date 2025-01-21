@@ -1,4 +1,5 @@
 <!-- Services Start -->
+ <!-- 
 <div class="container-fluid bg-light pt-5">
   <div class="container py-5">
     <div class="d-flex flex-column text-center mb-5">
@@ -19,16 +20,33 @@
     </div>
   </div>
 </div>
+-->
 <!-- Services End -->
 
-<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="container-fluid bg-light pt-5">
+  <div class="container py-5">
+    <div class="d-flex flex-column text-center mb-5">
+      <h4 class="text-secondary mb-3">Nuestros Proyectos</h4>
+      <h1 class="display-4 m-0"><span class="text-primary">Proyectos</span> Humanitarios</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-1 g-lg-4 align-content-center align-content-lg-center">
   <div class="col">
     <div class="card">      
       <div class="card-body">
-        <h2 class="card-title text-primary bg-light">{{ proyecto.titulo }}</h2>
-        <small class="text-muted ">
-        <p class="card-text text-justify bg-white">{{ proyecto.descripcionl }}</p>
-      </small>
+        <div class="card-title">
+          <h2 class="text-primary bg-light text-center">{{ proyecto.titulo }}</h2>
+        </div>
+        <div class="card-text">
+          <small class="text-muted">
+            <p class="text-justify bg-white">
+              {{ proyecto.descripcionl }}
+            </p>        
+            <!-- <p class="card-text text-justify bg-white">{{ proyecto.descripcionl }}</p> -->
+          </small>
+        </div>
       </div>
     </div>
   </div>

@@ -37,3 +37,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export async function getPrerenderParams() {
+  const proyectos = await fetch('/api/proyectos').then(res => res.json()); 
+  return proyectos.map((proyecto: any) => ({ params: { id: proyecto.id } })); 
+}

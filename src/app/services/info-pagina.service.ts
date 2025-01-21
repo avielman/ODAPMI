@@ -365,60 +365,10 @@ export class InfoPaginaService {
     fecha: "09/12/2024",
   }];
 
-  proyectos: Proyectos[] = [
-      {
-        "id": 1,
-        "titulo": "Día Internacional de la Paz",
-        "descripcion": "El Día Internacional de la Paz fue establecido en 1981 por la Asamblea General de las Naciones Unidas, celebrándose cada año el 21 de septiembre. En este 2024, conmemoramos un hecho significativo: el 25 aniversario de la adopción de la Declaración y Programa de Acción sobre una Cultura de Paz por parte de la ONU. Este documento reafirma que la paz no es simplemente la ausencia de conflictos, sino un estilo de vida que todos podemos cultivar activamente.",
-        "descripcionl": "El Día Internacional de la Paz fue establecido en 1981 por la Asamblea General de las Naciones Unidas, celebrándose cada año el 21 de septiembre. En este 2024, conmemoramos un hecho significativo: el 25 aniversario de la adopción de la Declaración y Programa de Acción sobre una Cultura de Paz por parte de la ONU. Este documento reafirma que la paz no es simplemente la ausencia de conflictos, sino un estilo de vida que todos podemos cultivar activamente.  Tras un período de tensiones internacionales y conflictos armados, la comunidad internacional reconoció la necesidad de promover la paz y la no violencia.  Es una oportunidad para reflexionar sobre la importancia de la paz y fomentar el diálogo entre diferentes culturas y religiones. Las propuestas son las siguientes: Organizar eventos culturales, Participar en marchas por la paz, Promover proyectos de voluntariado",
-        "iconclass": "flaticon-house",
-        "link": ""
-      },
-      {
-        "id": 2,
-        "titulo": "Guatemala Celebra el Día del Niño con Amor, Alegría e Ilusión",
-        "descripcion": "El pasado 1 de octubre, en Guatemala, se celebró el Día del Niño, una fecha muy especial que la ONG conmemora año y una vez más ha hecho de esta celebración un día inolvidable para los más pequeños.",
-        "descripcionl": "El pasado 1 de octubre, en Guatemala, se celebró el Día del Niño, una fecha muy especial que la ONG conmemora año y una vez más ha hecho de esta celebración un día inolvidable para los más pequeños.",
-        "iconclass": "flaticon-food",
-        "link": ""
-      },
-      {
-        "id": 3,
-        "titulo": "Día Internacional de la Niña",
-        "descripcion": "Cada 11 de octubre, el mundo celebra el Día Internacional de la Niña, una fecha que busca reconocer los derechos y desafíos únicos que enfrentan millones de niñas a nivel global. Instituido por la Asamblea General de las Naciones Unidas en 2011, este día nos invita a reflexionar sobre la necesidad urgente de proteger la dignidad, la integridad y el futuro de las niñas, especialmente aquellas en situación de vulnerabilidad.",
-        "descripcionl": "Cada 11 de octubre, el mundo celebra el Día Internacional de la Niña, una fecha que busca reconocer los derechos y desafíos únicos que enfrentan millones de niñas a nivel global. Instituido por la Asamblea General de las Naciones Unidas en 2011, este día nos invita a reflexionar sobre la necesidad urgente de proteger la dignidad, la integridad y el futuro de las niñas, especialmente aquellas en situación de vulnerabilidad.",
-        "iconclass": "flaticon-grooming",
-        "link": ""
-      },
-      {
-        "id": 4,
-        "titulo": "Día Internacional de las Personas sin Hogar",
-        "descripcion": "Cada 10 de octubre, se conmemora el Día Internacional de las Personas sin Hogar, una fecha clave para visibilizar la realidad de millones de personas que viven sin un techo o un hogar seguro. Aunque en algunos países esta celebración tiene lugar en otras fechas, su objetivo es el mismo: concienciar y generar acciones concretas para ayudar a quienes enfrentan esta situación tan vulnerable.",
-        "descripcionl": "Cada 10 de octubre, se conmemora el Día Internacional de las Personas sin Hogar, una fecha clave para visibilizar la realidad de millones de personas que viven sin un techo o un hogar seguro. Aunque en algunos países esta celebración tiene lugar en otras fechas, su objetivo es el mismo: concienciar y generar acciones concretas para ayudar a quienes enfrentan esta situación tan vulnerable.",
-        "iconclass": "flaticon-cat",
-        "link": ""
-      },
-      {
-        "id": 5,
-        "titulo": "Día Mundial de la Alimentación 2024",
-        "descripcion": "Cada 16 de octubre desde 1979, el mundo se une para conmemorar el Día Mundial de la Alimentación, una iniciativa promovida por la Organización de las Naciones Unidas para la Agricultura y la Alimentación (FAO). Este día tiene como objetivo sensibilizar sobre la importancia de garantizar una alimentación adecuada para todos y luchar contra el hambre, un desafío global que la Agenda 2030 busca erradicar, con su meta de 'hambre cero'.",
-        "descripcionl": "Cada 16 de octubre desde 1979, el mundo se une para conmemorar el Día Mundial de la Alimentación, una iniciativa promovida por la Organización de las Naciones Unidas para la Agricultura y la Alimentación (FAO). Este día tiene como objetivo sensibilizar sobre la importancia de garantizar una alimentación adecuada para todos y luchar contra el hambre, un desafío global que la Agenda 2030 busca erradicar, con su meta de 'hambre cero'.",
-        "iconclass": "flaticon-dog",
-        "link": ""
-      },
-      {
-        "id": 6,
-        "titulo": "Unidos por un Mundo Sin Pobreza",
-        "descripcion": "El 17 de octubre de cada año, el mundo se une para conmemorar el Día Internacional para la Erradicación de la Pobreza, una fecha destinada a concienciar sobre la necesidad urgente de acabar con la pobreza y la indigencia en todas sus formas, especialmente en las regiones más empobrecidas del mundo.",
-        "descripcionl": "El 17 de octubre de cada año, el mundo se une para conmemorar el Día Internacional para la Erradicación de la Pobreza, una fecha destinada a concienciar sobre la necesidad urgente de acabar con la pobreza y la indigencia en todas sus formas, especialmente en las regiones más empobrecidas del mundo.",
-        "iconclass": "flaticon-vaccine",
-        "link": ""
-      }
-    ]
-  
+  proyectos: Proyectos[] = [];
 
   constructor(private http: HttpClient) { 
-    
+    this.llenaProyecto();
   }
 
   carousel: any[] = 
@@ -492,6 +442,59 @@ export class InfoPaginaService {
     // Puedes utilizar una API externa o configurar un servidor de correo propio
     // Ejemplo usando una API de envío de correos:
     return this.http.post('https://api.tu-servicio-de-correo.com/enviar-correo', data);
+  }
+
+  llenaProyecto() {
+    this.proyectos = [
+    {
+      "id": 1,
+      "titulo": "Día Internacional de la Paz",
+      "descripcion":  "El Día Internacional de la Paz fue establecido en 1981 por la Asamblea General de las Naciones Unidas, celebrándose cada año el 21 de septiembre. En este 2024, conmemoramos un hecho significativo: el 25 aniversario de la adopción de la Declaración y Programa de Acción sobre una Cultura de Paz por parte de la ONU. Este documento reafirma que la paz no es simplemente la ausencia de conflictos, sino un estilo de vida que todos podemos cultivar activamente.",
+      "descripcionl": "El Día Internacional de la Paz fue establecido en 1981 por la Asamblea General de las Naciones Unidas, celebrándose cada año el 21 de septiembre. En este 2024, conmemoramos un hecho significativo: el 25 aniversario de la adopción de la Declaración y Programa de Acción sobre una Cultura de Paz por parte de la ONU. Este documento reafirma que la paz no es simplemente la ausencia de conflictos, sino un estilo de vida que todos podemos cultivar activamente.  Tras un período de tensiones internacionales y conflictos armados, la comunidad internacional reconoció la necesidad de promover la paz y la no violencia.  Es una oportunidad para reflexionar sobre la importancia de la paz y fomentar el diálogo entre diferentes culturas y religiones. Las propuestas son las siguientes: Organizar eventos culturales, Participar en marchas por la paz, Promover proyectos de voluntariado.",
+      "iconclass": "flaticon-house",
+      "link": ""
+    },
+    {
+      "id": 2,
+      "titulo": "Guatemala Celebra el Día del Niño con Amor, Alegría e Ilusión",
+      "descripcion": "El pasado 1 de octubre, en Guatemala, se celebró el Día del Niño, una fecha muy especial que la ONG conmemora año y una vez más ha hecho de esta celebración un día inolvidable para los más pequeños.",
+      "descripcionl": "El pasado 1 de octubre, en Guatemala, se celebró el Día del Niño, una fecha muy especial que la ONG conmemora año y una vez más ha hecho de esta celebración un día inolvidable para los más pequeños.",
+      "iconclass": "flaticon-food",
+      "link": ""
+    },
+    {
+      "id": 3,
+      "titulo": "Día Internacional de la Niña",
+      "descripcion": "Cada 11 de octubre, el mundo celebra el Día Internacional de la Niña, una fecha que busca reconocer los derechos y desafíos únicos que enfrentan millones de niñas a nivel global. Instituido por la Asamblea General de las Naciones Unidas en 2011, este día nos invita a reflexionar sobre la necesidad urgente de proteger la dignidad, la integridad y el futuro de las niñas, especialmente aquellas en situación de vulnerabilidad.",
+      "descripcionl": "Cada 11 de octubre, el mundo celebra el Día Internacional de la Niña, una fecha que busca reconocer los derechos y desafíos únicos que enfrentan millones de niñas a nivel global. Instituido por la Asamblea General de las Naciones Unidas en 2011, este día nos invita a reflexionar sobre la necesidad urgente de proteger la dignidad, la integridad y el futuro de las niñas, especialmente aquellas en situación de vulnerabilidad.",
+      "iconclass": "flaticon-grooming",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "titulo": "Día Internacional de las Personas sin Hogar",
+      "descripcion": "Cada 10 de octubre, se conmemora el Día Internacional de las Personas sin Hogar, una fecha clave para visibilizar la realidad de millones de personas que viven sin un techo o un hogar seguro. Aunque en algunos países esta celebración tiene lugar en otras fechas, su objetivo es el mismo: concienciar y generar acciones concretas para ayudar a quienes enfrentan esta situación tan vulnerable.",
+      "descripcionl": "Cada 10 de octubre, se conmemora el Día Internacional de las Personas sin Hogar, una fecha clave para visibilizar la realidad de millones de personas que viven sin un techo o un hogar seguro. Aunque en algunos países esta celebración tiene lugar en otras fechas, su objetivo es el mismo: concienciar y generar acciones concretas para ayudar a quienes enfrentan esta situación tan vulnerable.",
+      "iconclass": "flaticon-cat",
+      "link": ""
+    },
+    {
+      "id": 5,
+      "titulo": "Día Mundial de la Alimentación 2024",
+      "descripcion": "Cada 16 de octubre desde 1979, el mundo se une para conmemorar el Día Mundial de la Alimentación, una iniciativa promovida por la Organización de las Naciones Unidas para la Agricultura y la Alimentación (FAO). Este día tiene como objetivo sensibilizar sobre la importancia de garantizar una alimentación adecuada para todos y luchar contra el hambre, un desafío global que la Agenda 2030 busca erradicar, con su meta de 'hambre cero'.",
+      "descripcionl": "Cada 16 de octubre desde 1979, el mundo se une para conmemorar el Día Mundial de la Alimentación, una iniciativa promovida por la Organización de las Naciones Unidas para la Agricultura y la Alimentación (FAO). Este día tiene como objetivo sensibilizar sobre la importancia de garantizar una alimentación adecuada para todos y luchar contra el hambre, un desafío global que la Agenda 2030 busca erradicar, con su meta de 'hambre cero'.",
+      "iconclass": "flaticon-dog",
+      "link": ""
+    },
+    {
+      "id": 6,
+      "titulo": "Unidos por un Mundo Sin Pobreza",
+      "descripcion": "El 17 de octubre de cada año, el mundo se une para conmemorar el Día Internacional para la Erradicación de la Pobreza, una fecha destinada a concienciar sobre la necesidad urgente de acabar con la pobreza y la indigencia en todas sus formas, especialmente en las regiones más empobrecidas del mundo.",
+      "descripcionl": "El 17 de octubre de cada año, el mundo se une para conmemorar el Día Internacional para la Erradicación de la Pobreza, una fecha destinada a concienciar sobre la necesidad urgente de acabar con la pobreza y la indigencia en todas sus formas, especialmente en las regiones más empobrecidas del mundo.",
+      "iconclass": "flaticon-vaccine",
+      "link": ""
+    }
+  ];
   }
     
 }
