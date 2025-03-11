@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
-=======
 /* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
->>>>>>> abc5e31 (Cambios realizados en el proyecto para dejarlo estable, se agregan imágenes tomadas de los proyectos ya realizados, se actualizan la mayoria de los componentes.)
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
