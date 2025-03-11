@@ -13,6 +13,14 @@ $fechaCreacion = date('Y-m-d H:i:s');
 define('REMITENTE', 'ongodapmi@gmail.com');
 define('DESTINATARIO', 'avielman@gmail.com');
 
+// Recibir datos del formulario
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+$fechaReservacion = $_POST['fechaReservacion'];
+$horaReservacion = $_POST['horaReservacion'];
+$proyecto = $_POST['proyecto'];
+$fechaCreacion = date('Y-m-d H:i:s');
+
 // Conexión a la base de datos (ajusta los datos según tu configuración)
 $servername = "localhost";
 $username = "vielman";
