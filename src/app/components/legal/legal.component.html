@@ -1,0 +1,43 @@
+<div class="container-fluid bg-light py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="text-secondary">Marco Legal</h1>
+      <h2 class="display-6">Fundamento <span class="text-primary">Jurídico</span></h2>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Constitución -->
+        <div class="card mb-4">
+          <div class="card-header bg-secondary">
+            <h3 class="mb-0 text-white">Constitución Política de la República de Guatemala</h3>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let articulo of marcoLegal['constitucion']" class="mb-4">
+              <h4 class="text-primary">{{ articulo.titulo }}</h4>
+              <p class="text-justify">{{ articulo.contenido }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Otros códigos y leyes -->
+        <div class="card mb-4" *ngFor="let seccion of ['codigoSalud', 'codigoNinez', 'leyMujer', 'leyDesarrollo', 'leyAdultoMayor']">
+          <div class="card-header bg-secondary">
+            <h3 class="mb-0 text-white">
+              {{ getTituloSeccion(seccion) }}
+            </h3>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let articulo of marcoLegal[seccion]" class="mb-4">
+              <h4 class="text-primary">{{ articulo.titulo }}</h4>
+              <p class="text-justify" *ngIf="articulo.contenido">{{ articulo.contenido }}</p>
+              <ul *ngIf="articulo.secciones">
+                <li *ngFor="let seccion of articulo.secciones">{{ seccion }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

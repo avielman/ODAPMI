@@ -1,0 +1,23 @@
+<!-- Services Start -->
+<div class="container-fluid bg-light pt-5">
+  <div class="container py-5">
+    <div class="d-flex flex-column text-center mb-5">
+      <h4 class="text-secondary mb-3">Nuestros Proyectos</h4>
+      <h1 class="display-4 m-0"><span class="text-primary">Proyectos</span> Humanitarios</h1>
+    </div>
+    <div class="row pb-3">
+      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let proyecto of proyectos; index as i; first as isFirst;">
+        <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5 flex-grow-1 h-100">
+          <div class="flex-grow-1">
+            <h3 [ngClass]="proyecto.iconclass" class="display-3 font-weight-normal text-secondary mb-3"></h3>
+            <h3 class="mb-3">{{ proyecto.titulo }}</h3>
+            <p class="text-justify">{{ proyecto.descripcion }}</p>
+          </div>
+          <!-- Usar routerLink con el ID correcto -->
+          <a [routerLink]="['#/proyecto', proyecto.id]">Ver proyecto</a>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Services End -->

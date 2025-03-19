@@ -1,0 +1,42 @@
+<a class="btn btn-secondary text-white mt-2" style="z-index: 2;" href="proyectos/">Regresar</a>
+
+<div class="container-fluid py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="blob-container">
+          <div class="blob-content">
+            <h3 class="display-6 mb-4 text-primary text-center">{{ proyecto.titulo }}</h3>
+            <p class="lead mb-4">{{ proyecto.descripcion }}</p>
+            <div class="text-justify">
+              <p [innerHTML]="proyecto.descripcionl"></p>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+<div class="row row-cols-1 row-cols-md-2 g-lg-4 align-content-center align-content-lg-center">
+  <div class="col">
+    <div class="card">      
+      <div class="card-body">
+        <div class="card-title">
+          <h2 class="text-primary bg-light text-center">{{ proyecto.titulo }}</h2>
+        </div>
+        <div class="card-text">
+          <small class="text-muted">
+            <p class="text-justify bg-white">
+              {{ proyecto.descripcionl }}
+            </p>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->

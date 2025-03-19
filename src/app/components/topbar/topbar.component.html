@@ -1,0 +1,54 @@
+<!-- Topbar Start -->
+<div class="container-fluid">
+  <div class="row bg-secondary py-2 px-lg-5">
+    <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+      <div class="d-inline-flex align-items-center">
+        <a class="text-white pr-3" href="">Preguntas</a>
+        <span class="text-white">|</span>
+        <a class="text-white px-3" href="">Ayuda</a>
+        <span class="text-white">|</span>
+        <a class="text-white pl-3" href="">Soporte</a>
+      </div>
+    </div>
+    <div class="col-lg-6 text-center text-lg-right">
+      <div class="d-inline-flex align-items-center">
+        <a class="text-white px-3" *ngFor="let red of redes; let i = index;" href="{{ red.nombre }}" target="_blank">
+          <i class="fab {{ red.icono }}"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row py-3 px-lg-5">
+    <div class="col-lg-4">
+      <a href="home/" class="navbar-brand d-none d-lg-block">
+        <h1 class="m-0 display-5 text-capitalize">
+          <span class="text-primary">{{ title }}</span> ONG
+        </h1>
+      </a>
+    </div>
+    <div class="col-lg-8 text-center text-lg-right">
+      <div class="d-inline-flex align-items-center">
+        <div class="d-inline-flex flex-column text-center pr-3 border-right">
+          <h6>Horarios de apertura</h6>
+          <p class="m-0">{{ nosotros.horarios }}</p>
+        </div>
+        <div class="d-inline-flex flex-column text-center px-3 border-right">
+          <h6>Envíanos un email</h6>
+          <p class="m-0">{{ nosotros.email }}</p>
+        </div>
+        <div class="d-inline-flex flex-column text-center pl-3">
+          <h6>Llamanos</h6>
+          <p class="m-0">{{ nosotros.cel }}</p>
+        </div>
+      </div>
+      <div class="d-inline-flex flex-column text-center pl-3">
+        <a href="home/" class="navbar-brand d-none d-lg-block">
+          <img loading="lazy"
+            class="ml-5 display-1 align-items-md-center align-self-center align-content-center align-middle"
+            style="height: 75px; width: 75px; align-items: flex-end;" (ngSrc)="logo" src="{{ logo }}" alt="ODAPMI">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Topbar End -->

@@ -1,0 +1,118 @@
+<div class="container mt-5">
+  <h1 class="text-center text-secondary">Acerca de Nosotros</h1>
+</div>
+<div class="container d-flex flex-column h-100">
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-4" >
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-img ml-4 mt-4 mr-4 pr-4 image-container">
+          <img src="../assets/img/transformando.jpg" class="card-img-top img-fluid" alt="...">
+        </div>
+        <div class="card-body flex-grow-1">
+          <h5 class="card-title text-primary">Transformando vidas con propósito</h5>
+          <p class="card-text text-justify">
+            En nuestra Organización No Gubernamental (ONG), nos dedicamos a brindar apoyo integral a las comunidades más vulnerables. Nuestra misión, visión y valores guían nuestro trabajo diario con el objetivo de crear un impacto duradero y generar un cambio positivo en la sociedad.
+          </p>
+        </div>
+        <div class="card-footer">
+          <p>Publicado hace: <span class="text-secondary"> {{ tiempo }} </span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-img ml-4 mt-4 mt-4 pr-4 image-container">
+          <img src="../assets/img/mision.jpg" class="card-img-top img-fluid" alt="...">
+        </div>
+        <div class="card-body flex-grow-1">
+          <h5 class="card-title text-primary">Misión</h5>
+          <p class="card-text text-justify">
+            La visión de nuestra ONG está enfocada en satisfacer las necesidades básicas de alimentación, vivienda, salud y educación de las poblaciones rurales más vulnerables de Guatemala, 
+            especialmente niños, mujeres y adultos mayores. Trabajamos en estrecha colaboración con las comunidades para fortalecer sus capacidades y promover su desarrollo sostenible.
+          </p>
+        </div>
+        <div class="card-footer">
+          <p>Publicado hace: <span class="text-secondary"> {{ tiempo }} </span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-img ml-4 mt-4 mt-4 pr-4 image-container">
+        <img src="../assets/img/vision.jpg" class="card-img-top img-fluid" alt="...">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-primary">Visión</h5>
+        <p class="card-text text-justify">
+          <strong>Nuestra ONG implementa programas integrales para mejorar la calidad de vida de niños, mujeres y adultos mayores en comunidades rurales de Guatemala.</strong> 
+          Ofrecemos servicios de salud, educación, vivienda, alimentación y apoyo psicológico. 
+          Trabajamos en conjunto con otras organizaciones y gobiernos para fortalecer las comunidades y brindar soluciones a sus necesidades más urgentes. 
+          Brindar apoyo para que se puedan localizar a personas menores de edad, adultos mayores, madres solteras y personas necesitadas para brindarles ayuda socital y obtengan 
+          un desarrollo integral, moral y social, a través del otorgamiento de vivienda propia así como dormitorios, acceso a vestuario, servicios médicos y servicios dentales 
+          y donación de alimentos. 
+          <br>
+          <strong>Construir comunidades más fuertes y resilientes en Guatemala.</strong> 
+          Enfocados en mejorar el bienestar de niños, mujeres y adultos mayores a través de programas de vivienda, salud, educación y desarrollo comunitario. 
+          Trabajamos en colaboración con las comunidades para encontrar soluciones sostenibles a sus desafíos. Proveer de las necesidades básicas y promover el desarrollo integral en 
+          comunidades rurales. Ofreciendo servicios esenciales y oportunidades para que las personas mejoren su calidad de vida. Trabajando en conjunto para construir un futuro más justo y digno.
+        </p>
+      </div>
+      <div class="card-footer">
+        <p>Publicado hace: <span class="text-secondary"> {{ tiempo }} </span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-img ml-4 mt-4 mt-4 pr-4 image-container">
+        <img src="../assets/img/valores.jpg" class="card-img-top img-fluid" alt="...">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-primary">Valores</h5>
+        <p class="card-text text-justify">
+          <strong>Solidaridad: </strong> 
+          <br>Sentimiento de unión y apoyo mutuo hacia las personas más necesitadas, promover la colaboración entre los miembros de la ONG 
+          y las comunidades beneficiarias para lograr objetivos comunes.
+          <br>
+          <strong>Empatía:</strong>
+          <br>
+          Capacidad de ponerse en el lugar de los demás y comprender sus necesidades y sentimientos. 
+          Escuchando atentamente las necesidades y preocupaciones de las comunidades y/o personas beneficiarias.  
+          <br>
+          <strong>Compromiso:</strong>
+          <br>Dedicación y entrega a la causa de la ONG, brindando un mejor futuro a las personas del país.  
+          <br>
+          <strong>Sostenibilidad:</strong>
+          <br>Compromiso con el desarrollo a largo plazo de la organización, a través de prácticas que garanticen la continuidad de nuestros proyectos.
+        </p>
+      </div>
+      <div class="card-footer">
+        <p>Publicado hace: <span class="text-secondary"> {{ tiempo }} </span></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col" *ngFor="let acerca from acercaDe">
+    <div class="card h-100">
+      <img src="{{ acerca.image }}" class="card-img-top img-fluid" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-primary">{{ acerca.titulo }} A</h5>
+        <p class="card-text">{{ acerca.descripcion }} A</p>
+      </div>
+      <div class="card-footer">
+        <p>{{ acerca.footer }} A</p>
+      </div>
+    </div>
+  </div>
+</div>
+-->

@@ -1,0 +1,102 @@
+<div class="container-fluid bg-light pt-5 pb-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h1 class="text-secondary mb-3">Contáctenos</h1>
+        <h4 class="display-6 m-0">Por favor llene el siguiente formulario <br><span class="text-primary">para que podamos contactarte</span></h4>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow bg-secondary text-white">
+          <div class="card-body">
+            <h3 class="text-primary text-center mb-4">
+              <!--
+              Formulario de Contacto
+            -->
+            </h3> 
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Nombres</label>
+                  <input type="text" class="form-control" formControlName="nombres" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Apellidos</label>
+                  <input type="text" class="form-control" formControlName="apellidos" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" formControlName="email" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" formControlName="telefono" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">DPI</label>
+                <input type="text" 
+                       class="form-control" 
+                       formControlName="dpi" 
+                       mask="0000-00000-0000"
+                       [showMaskTyped]="true"
+                       placeholder="0000-00000-0000"
+                       [ngClass]="{'is-invalid': isFieldInvalid('dpi'), 'is-valid': !isFieldInvalid('dpi') && contactForm.get('dpi')?.touched}"
+                       required>
+                <div class="invalid-feedback" *ngIf="isFieldInvalid('dpi')">
+                  {{ getDpiErrorMessage() }}
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Dirección</label>
+                <textarea class="form-control" rows="3" formControlName="direccion" required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Comentario</label>
+                <textarea class="form-control" rows="3" formControlName="comentario"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Preferencia de contacto</label>
+                <div formGroupName="preferenciasContacto">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" formControlName="contactoTelefono">
+                    <label class="form-check-label">Teléfono</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" formControlName="contactoEmail">
+                    <label class="form-check-label">Email</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" formControlName="contactoWhatsapp">
+                    <label class="form-check-label">WhatsApp</label>
+                  </div>
+                  <div class="text-danger" *ngIf="isPreferenciasInvalid">
+                    Por favor seleccione al menos una opción para contactarlo
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary text-white">
+                  Enviar
+                </button>
+                <div *ngIf="!contactForm.valid" class="text-danger mt-2">
+                  Por favor complete todos los campos requeridos correctamente
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

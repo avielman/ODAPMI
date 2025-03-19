@@ -1,0 +1,48 @@
+<div class="container-fluid bg-light pt-0 pb-0">
+  <div class="container py-5">
+    <div class="row d-flex flex-column text-center mb-0">
+      <h1 class="text-secondary mb-3">Planes de Donaciones</h1>
+      <h1 class="display-4 m-0">{{ donaciones.Subtitulo1 }} <span class="text-primary">{{ donaciones.Subtitulo2 }}</span></h1>
+    </div>
+
+    <div class="row row-equal-height">
+      <div class="col-lg-4 mb-4 mt-5 d-flex" *ngFor="let donacion of donaciones.opciones">
+        <div class="card border-0 w-100">
+          <div class="card-header position-relative border-0 p-0 mb-4">
+            <img loading="lazy" class="card-img-top" src="{{ donacion.imagen }}" alt="">
+            <div class="position-static d-flex flex-column align-items-center justify-content-center w-100 pt-2 align-items-center"
+              style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
+              <div class="row">
+                <div class="col px-3" style="max-width: 400px;">
+                  <h3 class="text-primary mb-3 text-center text-break small-text">{{ donacion.tipo }}</h3>
+                </div>
+              </div>
+              <div class="row mt-0 mb-0">
+                <h1 class="display-4 text-white mb-2 mt-0">
+                  <small class="align-top display-4" style="font-size: 22px; line-height: 45px;">{{ donacion.moneda }}</small>
+                  {{ donacion.precio }}
+                  <small class="align-bottom" style="font-size: 16px; line-height: 40px;">{{ donacion.plazo }}</small>
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-0 mt-5">
+            <ul class="list-group list-group-flush ml-xl-5">
+              <li class="list-group-item p-2 mt-n3"><i class="fa fa-check text-secondary mr-2"></i>{{ donacion.beneficio1 }}
+              </li>
+              <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>{{ donacion.beneficio2 }}
+              </li>
+              <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>{{ donacion.beneficio3 }}
+              </li>
+              <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>{{ donacion.beneficio4 }}
+              </li>
+            </ul>
+          </div>
+          <div class="card-footer border-0 p-0">
+            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
