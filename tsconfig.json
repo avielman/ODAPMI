@@ -1,39 +1,14 @@
-<<<<<<< HEAD
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
-{
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-=======
 /* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
->>>>>>> abc5e31 (Cambios realizados en el proyecto para dejarlo estable, se agregan imágenes tomadas de los proyectos ya realizados, se actualizan la mayoria de los componentes.)
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-<<<<<<< HEAD
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
-=======
     "skipLibCheck": true,
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -42,16 +17,11 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022"
->>>>>>> abc5e31 (Cambios realizados en el proyecto para dejarlo estable, se agregan imágenes tomadas de los proyectos ya realizados, se actualizan la mayoria de los componentes.)
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-<<<<<<< HEAD
-    "enableResourceInlining": true,
-=======
->>>>>>> abc5e31 (Cambios realizados en el proyecto para dejarlo estable, se agregan imágenes tomadas de los proyectos ya realizados, se actualizan la mayoria de los componentes.)
     "strictTemplates": true
   }
 }
