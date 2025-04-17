@@ -16,7 +16,7 @@
           <div class="d-flex justify-content-start mt-4">
             <a *ngFor="let red of redes; let i = index;"
               class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;"
-              href="{{ red.nombre }}" target="_blank">
+              routerLink="#/{{ red.nombre }}" target="_blank">
               <i class="fab {{ red.icono }}"></i>
             </a>
           </div>
@@ -24,11 +24,11 @@
         <div class="col-md-4 mb-5">
           <h5 class="text-primary mb-4">Enlaces populares</h5>
           <div class="d-flex flex-column justify-content-start">
-            <a class="text-white mb-2" href="home"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
-            <a class="text-white mb-2" href="acercade"><i class="fa fa-angle-right mr-2"></i>Acerca</a>
-            <a class="text-white mb-2" href="proyectos"><i class="fa fa-angle-right mr-2"></i>Nuestors Proyectos</a>
-            <a class="text-white mb-2" href="equipo"><i class="fa fa-angle-right mr-2"></i>Nuestro equipo</a>
-            <a class="text-white" href="contactenos"><i class="fa fa-angle-right mr-2"></i>Contáctenos</a>
+            <a class="text-white mb-2" href="#/home"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+            <a class="text-white mb-2" href="#/acercade"><i class="fa fa-angle-right mr-2"></i>Acerca</a>
+            <a class="text-white mb-2" href="#/proyectos"><i class="fa fa-angle-right mr-2"></i>Nuestors Proyectos</a>
+            <a class="text-white mb-2" href="#/equipo"><i class="fa fa-angle-right mr-2"></i>Nuestro equipo</a>
+            <a class="text-white" href="#/contactenos"><i class="fa fa-angle-right mr-2"></i>Contáctenos</a>
           </div>
         </div>
         <div class="col-md-4 mb-5">
@@ -53,7 +53,7 @@
   <div class="row">
     <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
       <p class="m-0 text-white">
-        &copy; <a class="text-white font-weight-bold" href="#">{{ nosotros.url }}</a>. Todos los derechos reservados
+        &copy; <a class="text-white font-weight-bold" href="#/acercade">{{ nosotros.url }}</a>. Todos los derechos reservados
         2024. Diseñado por
         <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
       </p>

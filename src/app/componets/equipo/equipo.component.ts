@@ -1,8 +1,12 @@
+import { InfoPaginaService } from './../../services/info-pagina.service';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { InfoPaginaService } from 'src/app/services/info-pagina.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-equipo',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './equipo.component.html',
   styleUrls: ['./equipo.component.css', '../../../assets/css/style.min.css']
 })

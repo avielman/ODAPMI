@@ -1,10 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { InfoPaginaService } from '../services/info-pagina.service';
 import { CarruselComponent } from '../componets/carrusel/carrusel.component';
 import { NgModelGroup } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css', '../../assets/css/style.min.css', '../../assets/lib/flaticon/font/flaticon.css', '../../assets/lib/owlcarousel/assets/owl.carousel.min.css',
     '../../assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css']
@@ -13,7 +17,7 @@ import { NgModelGroup } from '@angular/forms';
 export class HomeComponent {
   title = 'ODAPMI';
   logo = '../assets/img/logo.jpg';
-  activeIndex: number = 0;  
+  activeIndex: number = 0;
   //Variables locales
   acerca: any = {};
   blogs: any = {};
@@ -28,7 +32,7 @@ export class HomeComponent {
   testimonios: any = {};
 
 
-  constructor ( private ips: InfoPaginaService) {    
+  constructor ( private ips: InfoPaginaService) {
     this.acerca = ips.home.acerca;
     this.caracteristicas = ips.home.caracteristicas;
     this.carrousel = ips.home.carrousel;

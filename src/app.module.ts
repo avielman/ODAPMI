@@ -22,7 +22,7 @@ import { LegalComponent } from "./app/components/legal/legal.component";
 
 @NgModule({
   declarations: [
-    
+
   ],
   imports: [
     AcercadeComponent,
@@ -35,7 +35,7 @@ import { LegalComponent } from "./app/components/legal/legal.component";
     CaracteristicasComponent,
     ContactenosComponent,
     DonacionesComponent,
-    EquipoComponent,
+    //EquipoComponent,
     FooterComponent,
     HomeComponent,
     LegalComponent,

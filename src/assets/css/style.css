@@ -528,7 +528,6 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
 }
 
 .img-thumbnail {
@@ -551,6 +550,7 @@ mark,
 
 .figure-caption {
   font-size: 90%;
+  height: auto;
   color: #6c757d;
 }
 
@@ -9838,8 +9838,6 @@ h6 {
   padding: 0;
   list-style-type: none;
 }
-<<<<<<< HEAD
-=======
 
 .image-container {
   overflow: hidden;
@@ -9852,4 +9850,3 @@ h6 {
   max-width: 100%;
   height: auto;
 }
->>>>>>> abc5e31 (Cambios realizados en el proyecto para dejarlo estable, se agregan imágenes tomadas de los proyectos ya realizados, se actualizan la mayoria de los componentes.)

@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { InfoPaginaService } from '../../services/info-pagina.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css', '../../../assets/css/style.min.css']
 })
@@ -13,7 +15,7 @@ export class FooterComponent {
   nosotros: any;
   redes: any;
 
-  constructor ( private ips: InfoPaginaService) {   
+  constructor ( private ips: InfoPaginaService) {
     this.nosotros = ips.home.nosotros;
     this.redes = ips.home.redes;
   }

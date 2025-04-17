@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -28,28 +28,28 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
     AppComponent,
     HomeComponent,
     CarruselComponent,
     TopbarComponent,
+    //RouterModule.forRoot(routes)
     NavbarComponent,
     BookingComponent,
     AboutComponent,
     ServiciosComponent,
     CaracteristicasComponent,
     DonacionesComponent,
-    EquipoComponent,
+    //EquipoComponent,
     TestimoniosComponent,
     BlogsComponent,
     FooterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-    //RouterModule.forRoot(routes)
-  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }

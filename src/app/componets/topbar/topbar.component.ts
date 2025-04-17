@@ -1,8 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { InfoPaginaService } from 'src/app/services/info-pagina.service';
+import { RouterModule } from '@angular/router';
+import { InfoPaginaService } from '../../services/info-pagina.service';
 
 @Component({
   selector: 'app-topbar',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './topbar.component.html',
   styleUrls: ['./topbar.component.css', '../../../assets/css/style.min.css']
 })
