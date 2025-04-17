@@ -15,7 +15,7 @@ import { BlogComponent } from "./app/components/blog/blog.component";
 import { RegresarComponent } from "./app/components/regresar/regresar.component";
 import { DonacionesComponent } from "./app/components/donaciones/donaciones.component";
 import { CaracteristicasComponent } from "./app/components/caracteristicas/caracteristicas.component";
-import { EquipoComponent } from "./app/components/equipo/equipo.component";
+//import { EquipoComponent } from "./app/components/equipo/equipo.component";
 import { TestimoniosComponent } from "./app/components/testimonios/testimonios.component";
 import { ContactenosComponent } from "./app/components/contactenos/contactenos.component";
 import { LegalComponent } from "./app/components/legal/legal.component";

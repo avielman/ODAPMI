@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { InfoPaginaService } from '../services/info-pagina.service';
-import { CarruselComponent } from '../componets/carrusel/carrusel.component';
+//import { CarruselComponent } from '../componets/carrusel/carrusel.component';
 import { NgModelGroup } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
