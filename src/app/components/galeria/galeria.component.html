@@ -1,0 +1,49 @@
+<div class="galeria-container">
+  <h2 class="text-primary bg-light text-center">Galería</h2>
+
+  <div class="tz-galery">
+    <div class="row">
+      <div class="col-sm12 col-md-4">
+        <a class="lightbox" href="{{imagen}}">
+          <img [src]="imagen" alt="Imagen de la galería" />
+        </a>
+      </div>
+      <div class="col-sm12 col-md-4">
+        <a class="lightbox" href="{{imagen}}">
+          <video controls>
+            <source [src]="video" type="video/mp4">
+          </video>
+        </a>
+      </div>
+      <div class="col-sm12 col-md-4">
+        <a class="lightbox" href="{{imagen}}">
+          <video controls>
+            <source [src]="video2" type="video/mp4">
+          </video>
+        </a>
+      </div>
+      </div>
+      <div class="row mt-5">
+      <div class="col-sm12 col-md-4">
+        <a class="lightbox" href="{{imagen}}">
+          <video controls>
+            <source [src]="video2" type="video/mp4">
+          </video>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="galeria-container">
+  <div class="tz-galery">
+    <div class="row">
+    <div *ngFor="let archivo of archivos; index as i;" class="galeria-item col-sm12 col-md-4">
+      <img *ngIf="archivo.endsWith('.jpg') || archivo.endsWith('.png') || archivo.endsWith('.gif')" [src]="ficheros[i]" alt="{{ archivo }}" />
+      <video *ngIf="archivo.endsWith('.mp4')" controls>
+        <source [src]="ruta + archivo" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+  </div>
+</div>

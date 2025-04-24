@@ -16,6 +16,7 @@ import { RegresarComponent } from "./app/components/regresar/regresar.component"
 import { DonacionesComponent } from "./app/components/donaciones/donaciones.component";
 import { CaracteristicasComponent } from "./app/components/caracteristicas/caracteristicas.component";
 //import { EquipoComponent } from "./app/components/equipo/equipo.component";
+import { GaleriaComponent } from "./app/components/galeria/galeria.component";
 import { TestimoniosComponent } from "./app/components/testimonios/testimonios.component";
 import { ContactenosComponent } from "./app/components/contactenos/contactenos.component";
 import { LegalComponent } from "./app/components/legal/legal.component";
@@ -37,6 +38,7 @@ import { LegalComponent } from "./app/components/legal/legal.component";
     DonacionesComponent,
     //EquipoComponent,
     FooterComponent,
+    GaleriaComponent,
     HomeComponent,
     LegalComponent,
     NavbarComponent,
