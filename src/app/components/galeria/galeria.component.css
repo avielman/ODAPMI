@@ -87,10 +87,10 @@ body {
 
 
 /* Estilo para las imágenes */
-img {
+a img {
   width: 100%; /* Ocupa todo el ancho del contenedor */
-  max-width: 350px; /* Tamaño máximo para pantallas grandes */
-  height: 200px; /* Altura fija para todas las imágenes */
+  max-width: 500px; /* Tamaño máximo para pantallas grandes */
+  height: 300px; /* Altura fija para todas las imágenes */
   object-fit: cover; /* Recorta la imagen para llenar el contenedor manteniendo la proporción */
   display: block; /* Elimina espacios extra alrededor de las imágenes */
   margin: 0 auto; /* Centra la imagen dentro del contenedor */
@@ -106,10 +106,10 @@ img {
 
 
 /* Estilo para los videos */
-video {
+a video {
   width: 100%; /* Ocupa todo el ancho del contenedor */
-  max-width: 350px; /* Tamaño máximo para pantallas grandes */
-  height: 200px; /* Altura fija para todos los videos */
+  max-width: 500px; /* Tamaño máximo para pantallas grandes */
+  height: 300px; /* Altura fija para todos los videos */
   object-fit: cover; /* Recorta el video para llenar el contenedor manteniendo la proporción */
   display: block; /* Elimina espacios extra alrededor de los videos */
   margin: 0 auto; /* Centra el video dentro del contenedor */
@@ -118,6 +118,25 @@ video {
 /* Ajustes responsivos para pantallas pequeñas */
 @media (max-width: 576px) {
   video {
+    max-width: 100%; /* Ajusta el ancho al tamaño del contenedor */
+    height: 150px; /* Reduce la altura para pantallas pequeñas */
+  }
+}
+
+
+/* Estilo para las imágenes */
+.multimedia {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 350px; /* Tamaño máximo para pantallas grandes */
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Recorta la imagen para llenar el contenedor manteniendo la proporción */
+  display: block; /* Elimina espacios extra alrededor de las imágenes */
+  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 576px) {
+  img {
     max-width: 100%; /* Ajusta el ancho al tamaño del contenedor */
     height: 150px; /* Reduce la altura para pantallas pequeñas */
   }

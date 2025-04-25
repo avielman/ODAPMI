@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class GaleriaService {
   //private apiUrl = 'assets/php/getFiles.php'; // URL del backend
-  private apiUrl = 'localhost/getFiles.php'; // URL del backend
+  //private apiUrl = 'localhost/getFiles.php'; // URL del backend Local
+  private apiUrl = 'http://server/assets/php/getfiles.php'; // URL del backend
   constructor(private http: HttpClient) { }
 
   getFiles(): Observable<string[]> {

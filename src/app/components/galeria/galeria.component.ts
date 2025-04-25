@@ -28,7 +28,7 @@ export class GaleriaComponent {
     this.galeriaService.getFiles().subscribe(
       (data: string[]) => {
         this.archivos = data; // Asignar los nombres de los archivos al array
-        if (this.archivos.length > 0) {
+        if (this.archivos.length <= 0) {
           this.llenaArchivos(); // Llamar a la función para llenar los archivos
         }
 
@@ -36,20 +36,16 @@ export class GaleriaComponent {
         for (let i = 0; i < this.archivos.length; i++) {
           this.ficheros[i] = this.ruta + this.archivos[i]; // Asignar la ruta base a cada archivo
         }
-
-        console.log(this.archivos);
-        console.log(this.ficheros);
       },
       (error) => {
         this.error = 'Error al cargar los archivos'; // Manejar el error
+        console.log("Error: " +this.error);
       }
     );
-    console.log(this.archivos);
   }
 
   llenaArchivos() {
     this.archivos = ["feature.jpg","imagen_donacion.jpg","video_donacion1.mp4","video_donacion2.mp4"];
-    console.log(this.archivos);
   }
 }
 

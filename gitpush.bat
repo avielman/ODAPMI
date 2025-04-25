@@ -1,4 +1,5 @@
 git pull
 git add .
 git commit -m "Cambios menores"
-git push
+git push origin master
+git status
